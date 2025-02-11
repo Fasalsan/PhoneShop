@@ -1,0 +1,79 @@
+:root {
+  --clr-head: #33449c;
+  --clr-orange: #fcb040;
+  --clr-orange-hover: #c27b11;
+  --clr-blue: #33449c;
+  --clr-white: #ffffff;
+  --clr-bg: #f2f4f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Playwrite DE Grund", cursive;
+}
+/* -------------------------------------inside--------------------------------------------- */
+/* mian */
+main {
+  padding: 100px;
+}
+.label-per-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 20px 0;
+}
+
+.label-per-page h1 {
+  font-weight: bold;
+}
+.about-l-r {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-contact button {
+  background: var(--clr-orange);
+  padding: 16px 30px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.2s; /* Animation */
+}
+a {
+  text-direction: none;
+}
+.btn-contact button:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.gp-left h1 {
+  font-size: 20px;
+  font-weight: 400;
+}
+.l-img {
+  width: 600px;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 100px 20px 20px 20px;
+  }
+  main .respon {
+    display: flex;
+    flex-direction: column;
+  }
+  .l-img {
+    width: 100%;
+  }
+  .about-l-r {
+    display: flex;
+    flex-direction: column;
+  }
+}

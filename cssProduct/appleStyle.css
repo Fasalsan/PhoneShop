@@ -1,0 +1,143 @@
+body{
+  margin: 10;
+  padding: 30;
+}
+.container{
+  width: 80%;
+  margin: auto;
+  background-color:white;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.308) 0px 3px 8px;
+  padding: 17px;
+
+}
+.flexbox{
+  /* width: 50%; */
+  /* background-color: aliceblue; */
+  /* box-shadow: rgba(0, 0, 0, 0.308) 0px 3px 8px; */
+  /* cursor: pointer; */
+  transition: all 0.7s;
+  border-radius: 0 20px;
+}
+.flexbox:hover{
+  /* box-shadow: rgb(0, 0, 0) 0px 3px 8px; */
+  transform: scale(1.04);
+  border-radius: 20px;
+}
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title p{
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.308) 0px 3px 8px;
+}
+
+.photo{
+  width: 100%;
+  overflow: hidden;
+  
+}
+.photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+.flexbox:hover .photo img{
+  animation: scale 1.5s infinite;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* .discribebox{
+  background-color: aqua;
+} */
+.box2-2{
+  width: 100%;
+  display: flex;
+  margin-top: 10x;
+  gap: 10px;
+  
+}
+.box2-2 img{
+  width: 10%;
+  height: 10%;
+}
+.icon1{
+  display: flex;
+  margin: 5px;
+}
+.underline h1{
+  font-size: 17px;
+  color: blue;
+  font-weight: 600;
+  padding: 15px;
+}
+.underline h1:hover{
+  text-decoration: underline;
+  color: blue;
+}
+.order{
+  padding: -7px;
+  text-align: center;
+}
+.button{
+  width: 100%;
+  display: flex;
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+}
+.button1{
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 20px;
+  width: 45%;
+  height: 7vh;
+  margin: auto;
+  display: flex;
+  margin-top: 10px;
+}
+.button1 p{
+  font-weight: 500;
+  font-size: 15px;
+  font-family:"kantumruy" , Sans-serif;
+  color: black;
+  margin-top: -8px;
+}
+.button1 span{
+  font-size: 10px;
+  text-align: right;
+  margin-top: -6px;
+}
+
+@media screen and (max-width: 700px ) {
+  .container{
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 700px) {
+  .button{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .button1{
+      width: 100%;
+  }
+}

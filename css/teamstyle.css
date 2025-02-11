@@ -1,0 +1,173 @@
+:root {
+  --clr-head: #33449c;
+  --clr-orange: #fcb040;
+  --clr-orange-hover: #c27b11;
+  --clr-blue: #33449c;
+  --clr-white: #ffffff;
+  --clr-bg: #f2f4f8;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Playwrite DE Grund", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background: var(--clr-bg);
+}
+/* -----------------------------------inside-------------------------------------------- */
+main {
+  padding: 80px;
+}
+.label-per-page {
+  padding: 20px 0 40px 0;
+}
+.label-per-page h1 {
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.label-per-page p {
+  text-align: center;
+  font-size: 19px;
+}
+
+/* blockCard */
+.card-group {
+  --auto-grid-min-size: 16rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  grid-gap: 1rem;
+}
+
+.card {
+  /* width:100%; */
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+}
+.card:hover {
+  transform: translateY(-0.5rem);
+}
+.card a {
+  text-decoration: none;
+}
+.card-img img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  border: solid #33449c 2px;
+  padding: 5px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.card .card-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 0 20px 0;
+  margin: 0;
+}
+.card .card-label h4 {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+.card .card-label p {
+  color: gray;
+  font-size: 12px;
+  padding: 0 0 10px 0;
+}
+
+.card:hover {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* border: 1px solid #33449c */
+}
+
+.card:hover h4 {
+  font-weight: bold;
+  color: var(--clr-head);
+}
+.card:hover img {
+  border: solid #33449c 5px;
+  transform: scale(1.1);
+  padding: 0;
+}
+.card .card-icons a {
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 5px;
+}
+.card .card-icons a i {
+  transition: all 0.3s linear;
+}
+
+.card .card-icons a:hover i {
+  transform: scale(1.3);
+}
+
+@media (max-width: 900px) {
+  main {
+    padding: 100px 10px 10px 10px;
+  }
+  @media (max-width: 600px) {
+    main {
+      padding: 100px 10px 10px 10px;
+    }
+    .card {
+      /* width: 100%; */
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.3s;
+      border: 1px solid #dcdcdc;
+      border-radius: 10px;
+    }
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.8); /* Black with transparency */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  text-align: center;
+}
